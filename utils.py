@@ -1,0 +1,38 @@
+import pandas as pd
+data = [
+    ("date", "date time formatted as year-month-day hour:minute:second", "", "date"),
+    ("Appliances", "Energy use in Wh of all the house's appliances", "Wh", "Appliances Energy use"),
+    ("lights", "Energy use of light fixtures in the house in Wh", "Wh", "Energy use of light fixtures"),
+    ("T1", "Temperature in kitchen area, in Celsius", "Celsius", "Temperature in kitchen area"),
+    ("RH_1", "Humidity in kitchen area, in %", "%", "Humidity in kitchen area"),
+    ("T2", "Temperature in living room area, in Celsius", "Celsius", "Temperature in living room area"),
+    ("RH_2", "Humidity in living room area, in %", "%", "Humidity in living room area"),
+    ("T3", "Temperature in laundry room area, in Celsius", "Celsius", "Temperature in laundry room area"),
+    ("RH_3", "Humidity in laundry room area, in %", "%", "Humidity in laundry room area"),
+    ("T4", "Temperature in office room, in Celsius", "Celsius", "Temperature in office room"),
+    ("RH_4", "Humidity in office room, in %", "%", "Humidity in office room"),
+    ("T5", "Temperature in bathroom, in Celsius", "Celsius", "Temperature in bathroom"),
+    ("RH_5", "Humidity in bathroom, in %", "%", "Humidity in bathroom"),
+    ("T6", "Temperature outside the building (north side), in Celsius", "Celsius", "Temperature outside the building (north side)"),
+    ("RH_6", "Humidity outside the building (north side), in %", "%", "Humidity outside the building (north side)"),
+    ("T7", "Temperature in ironing room, in Celsius", "Celsius", "Temperature in ironing room"),
+    ("RH_7", "Humidity in ironing room, in %", "%", "Humidity in ironing room"),
+    ("T8", "Temperature in teenager room 2, in Celsius", "Celsius", "Temperature in teenager room 2"),
+    ("RH_8", "Humidity in teenager room 2, in %", "%", "Humidity in teenager room 2"),
+    ("T9", "Temperature in parents room, in Celsius", "Celsius", "Temperature in parents room"),
+    ("RH_9", "Humidity in parents room, in %", "%", "Humidity in parents room"),
+    ("T_out", "Temperature outside, in Celsius", "Celsius", "Temperature outside"),
+    ("Press_mm_hg", "Pressure, in mm Hg", "mm Hg", "Pressure"),
+    ("RH_out", "Humidity outside, in %", "%", "Humidity outside"),
+    ("Windspeed", "Wind speed, in m/s", "m/s", "Wind speed"),
+    ("Visibility", "Visibility, in km", "km", "Visibility"),
+    ("Tdewpoint", "Tdewpoint, °C", "°C", "Tdewpoint"),
+    ("rv1", "Random variable 1, nondimensional", "", "Random variable 1, nondimensional"),
+    ("rv2", "Random variable 2, nondimensional", "", "Random variable 2, nondimensional"),
+    ("hour", "Hour extracted from date-time", "", "Hour extracted from date-time"),
+    ("day_of_week", "Day of week extracted from date-time", "", "Day of week extracted from date-time"),
+    ("month", "Month extracted from date-time", "", "Month extracted from date-time"),
+]
+
+df_description = pd.DataFrame(data, columns=["Var", "Description", "Unity", "Full Name"]).set_index("Var", drop=True)
+
